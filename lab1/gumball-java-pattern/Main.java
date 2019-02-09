@@ -25,6 +25,7 @@ public class Main {
 	            case 3 :   GumballMachine gumballMachine2 = new GumballMachine(5,50,3);
 	            	       gumballMachine2.insertQuarter();
 	                       gumballMachine2.turnCrank();
+	            
 	                       break;
 	           }
 	        

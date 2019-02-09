@@ -15,6 +15,7 @@ public class HasQuarterState implements State {
  
 	public void ejectQuarter() {
 		System.out.println("Quarter returned");
+		gumballMachine.total=0;
 		gumballMachine.setState(gumballMachine.getNoQuarterState());
 	}
  
