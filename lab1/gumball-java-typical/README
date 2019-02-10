@@ -2,3 +2,4 @@ I have used the GumballMachine class and made changes in its constructor to acce
 I used the switch case to selct the type of gumball that must be considered as type 1,2 and 3 respectively.
 for the type 3 machine i.e., the one which accepts nickels, dimes and quarters, I have created a child class for the GumballMachine class which would then override the insertQuarter and turnCrank methods to support the type 3 machine.
 I used the reset() method to reset the multiple boolean and the total values to be reset to initial state after a gumball is ejected.
+I considered the checking criteria to be in the turnCrank() method and made calls to the insertQuarter method when required. I considered the gumball machine to be user friendly.
