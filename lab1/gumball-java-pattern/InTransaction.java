@@ -22,27 +22,25 @@ public class InTransaction implements State
     {
         // initialise instance variables
         this.gumballMachine=gumballMachine;
-        
-        nickel_count=0;
-        dime_count=0;
-        quarter_count=1; 
+            nickel_count=0;
+            dime_count=0;
+            quarter_count=0;
+        switch(gumballMachine.total){
+            case 5 : nickel_count++;break;
+            case 10 : dime_count++;break;
+            case 25 : quarter_count++;break;
+    }
     }
 
     public void insertQuarter() {
-        if(gumballMachine.type==2)
-        {
-            System.out.println("you inserted a quarter");
-            gumballMachine.total=gumballMachine.total + 25;
-            quarter_count++;
-            turnCrank();
-        }
-        else
-        {
+
             Scanner s = new Scanner(System.in);
-            System.out.println("Insert the value of coin");
+            if(gumballMachine.total<gumballMachine.price){
+            System.out.println("Insert the value of coin or enter 0 to eject coin");
             int coin= s.nextInt();
             if ( coin == 5 || coin == 10 || coin == 25)
             {
+                gumballMachine.total=gumballMachine.total + coin;
                 switch(coin){
                     case 5 :  System.out.println("You inserted a nickel");
                               nickel_count++;break;
@@ -52,8 +50,11 @@ public class InTransaction implements State
                               quarter_count++;break;
                     
                   }
-                gumballMachine.total=gumballMachine.total + coin;
-                turnCrank();
+                    System.out.println("total inserted: "+gumballMachine.total+ "\tgumball price : "+ gumballMachine.price);
+                    
+                insertQuarter();
+                //gumballMachine.total=gumballMachine.total + coin;
+                //turnCrank();
               }
               else if(coin == 0){
                   ejectQuarter();
@@ -62,30 +63,34 @@ public class InTransaction implements State
             {
                 System.out.println("insert a valid coin");
                 insertQuarter();
+            }}
+            else
+            {
+                
             }
           }
-        }
+        
 
  
-	public void ejectQuarter() {
-		System.out.println(" "+quarter_count + " quarter(s) returned  " +nickel_count+" nickel(s) returned  "+dime_count+" dime(s) returned" );
-		gumballMachine.total=gumballMachine.total-25;
-		reset();
-		gumballMachine.setState(gumballMachine.getNoQuarterState());
-	}
+    public void ejectQuarter() {
+        System.out.println(" "+quarter_count + " quarter(s) returned  " +nickel_count+" nickel(s) returned  "+dime_count+" dime(s) returned" );
+        gumballMachine.total=gumballMachine.total-25;
+        reset();
+        gumballMachine.setState(gumballMachine.getNoQuarterState());
+    }
  
-	public void turnCrank() {
-		System.out.println("You turned...");
-		if(gumballMachine.total >= gumballMachine.price)
-		{
-		    gumballMachine.setState(gumballMachine.getSoldState());
-		    reset();
+    public void turnCrank() {
+        System.out.println("You turned...");
+        if(gumballMachine.total >= gumballMachine.price)
+        {
+            gumballMachine.setState(gumballMachine.getSoldState());
+            System.out.println("Change returned: "+(gumballMachine.total-gumballMachine.price));
+            reset();
                 }
                 else
                 {
-                    System.out.println("total inserted: "+gumballMachine.total+ "\tgumball price : "+ gumballMachine.price);
-                    System.out.println("Insert more coins to get a gumball,  if you wish to eject quarter turn the eject or enter 0");
-                    insertQuarter();
+                  System.out.println("Not enough money");
+                  gumballMachine.setState(gumballMachine.getNoQuarterState());
                 }
 	}
 
