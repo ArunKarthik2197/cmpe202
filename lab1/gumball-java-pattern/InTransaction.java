@@ -25,15 +25,15 @@ public class InTransaction implements State
             nickel_count=0;
             dime_count=0;
             quarter_count=0;
-        switch(gumballMachine.total){
-            case 5 : nickel_count++;break;
-            case 10 : dime_count++;break;
-            case 25 : quarter_count++;break;
-    }
+
     }
 
     public void insertQuarter() {
-
+            switch(gumballMachine.total){
+            case 5 : nickel_count=1;break;
+            case 10 : dime_count=1;break;
+            case 25 : quarter_count=1;break;
+    }
             Scanner s = new Scanner(System.in);
             if(gumballMachine.total<gumballMachine.price){
             System.out.println("Insert the value of coin or enter 0 to eject coin");
@@ -92,19 +92,19 @@ public class InTransaction implements State
                   System.out.println("Not enough money");
                   gumballMachine.setState(gumballMachine.getNoQuarterState());
                 }
-	}
+    }
 
     public void dispense() {
         System.out.println("No gumball dispensed");
     }
  
-	public String toString() {
-		return "waiting for turn of crank";
-	}
-	public void reset(){
-	    nickel_count=0;
-	    quarter_count=0;
-	    dime_count=0;
-	    gumballMachine.total=0;
-	   }
+    public String toString() {
+        return "waiting for turn of crank";
+    }
+    public void reset(){
+        nickel_count=0;
+        quarter_count=0;
+        dime_count=0;
+        gumballMachine.total=0;
+       }
 }
