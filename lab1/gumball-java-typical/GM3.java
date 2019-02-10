@@ -11,7 +11,7 @@ public class GM3 extends GumballMachine
 
     private boolean has_dime;
     private boolean has_nickel;
-
+    Scanner scn = new Scanner(System.in);
     
 
     /**
@@ -31,6 +31,7 @@ public class GM3 extends GumballMachine
     }
         public void insertQuarter(int coin)
     {
+     
         switch(coin)
         {
             case 5 :
@@ -52,6 +53,16 @@ public class GM3 extends GumballMachine
                         System.out.println("please insert a valid coin");
                         break;
         }
+        
+        if(total<price1){
+        System.out.println(" you inserted "+total+" cents, please insert more "+(price1-total)+" cents to get a gumball");
+        int cn = scn.nextInt();
+        insertQuarter(cn);
+       }
+       else{
+           
+        }
+
     }
 
     
@@ -64,29 +75,25 @@ public class GM3 extends GumballMachine
                 if(price1==total)
                 {
                     this.num_gumballs-- ;
-                    reset();
                     System.out.println( "Thanks for your quarter.  Gumball Ejected!" ) ;
                 }
-                else if(total<price1)
-                {
-                    System.out.println(" you inserted "+total+" cents, please insert more "+(price1-total)+" cents to get a gumball");
-                    Scanner scn=new Scanner(System.in);
-                    int t=scn.nextInt();
-                    insertQuarter(t);
-                    turnCrank();
-                }
-                else
+
+                else if(total>price1)
                 {
                 this.num_gumballs--;
-                System.out.println("Gumball ejected, please take the remaining change of "+ (total-price1)+" cents");
-                reset();
+                System.out.println("Gumball Ejected, take the remaining "+(total-price1)+" cents");
             }
+                else
+                {
+                    System.out.println("not enough money, coins returned");
+                }
             }
             else
             {
                 reset();
                 System.out.println( "No More Gumballs!  please take back your coin(s)." ) ;
             }
+            reset();
         }
         else 
         {

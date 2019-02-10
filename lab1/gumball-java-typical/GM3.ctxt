@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=GM3
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ GM3\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=size\ price
+comment1.target=GM3(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GM3\r\n
+comment2.params=coin
+comment2.target=void\ insertQuarter(int)
+comment3.params=
+comment3.target=void\ turnCrank()
+comment4.params=
+comment4.target=void\ reset()
+numComments=5

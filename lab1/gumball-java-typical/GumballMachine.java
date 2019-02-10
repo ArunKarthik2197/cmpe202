@@ -21,12 +21,18 @@ public class GumballMachine
 
     public void insertQuarter(int coin)
     {
-        if ( coin == 25 ){
+        if ( coin == price1 ){
             this.has_quarter = true ;
             this.total=total+coin;}
         
-        else 
-            this.has_quarter = false ;
+        else if(total<price1){
+            this.total=total+coin;
+            insertQuarter(25);
+            this.has_quarter=true;
+        }
+        else{
+            this.has_quarter=false;
+        }
     }
 
     
@@ -45,8 +51,8 @@ public class GumballMachine
                 }
                 else
                 {
-                    insertQuarter(25);
-                    turnCrank();
+                    System.out.println(" not enough money");
+                    
                 }
             }
             else
