@@ -41,12 +41,13 @@ public class ReceiptStrategy implements PrintingStrategy
         System.out.println("\t\t\tRECEIPT\n");
         System.out.println(o.header);
         System.out.println("Order Number : "+o.ordersCount+"\n");
-        System.out.println(sandwichOrder.getQuantity()+" "+sandwichOrder.getName()+"\t\t"+sandwichOrder.getPrice());
+        System.out.println(sandwichOrder.getQuantity()+" "+sandwichOrder.getName()+"\t\t\t"+sandwichOrder.getPrice());
 
         ArrayList<String> s = new ArrayList();
+        s.add("{{{{ "+sandwichOrder.meatType+" }}}}");
         s.addAll(sandwichOrder.toppings);
         s.addAll(sandwichOrder.meatTops);
-        s.add("{{{{ "+sandwichOrder.meatType+" }}}}");
+        
         for(String element : s)
         {
             System.out.println(" "+element);
@@ -55,9 +56,9 @@ public class ReceiptStrategy implements PrintingStrategy
         System.out.println(sideOrder.getQuantity()+" "+sideOrder.getName()+"\t\t"+sideOrder.getPrice());
         double [] prices = pricing(sandwichOrder,sideOrder);
         
-        System.out.println("Sub.Total\t"+(prices[0]));
-        System.out.println("Tax\t\t"+prices[1]);
-        System.out.println("Total\t\t"+prices[2]);
+        System.out.println("\n\nSub.Total\t\t$"+(prices[0]));
+        System.out.println("Tax\t\t\t$"+prices[1]);
+        System.out.println("Total\t\t\t$"+prices[2]);
         System.out.println("\n"+o.footer);
         System.out.println("  ******************************  ");
     }
