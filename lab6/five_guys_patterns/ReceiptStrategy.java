@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.text.DecimalFormat;
 /**
  * Write a description of class ReceiptStrategy here.
  *
@@ -9,9 +10,11 @@ public class ReceiptStrategy implements PrintingStrategy
 {
     // instance variables - replace the example below with your own
     private double x;
+    Order o;
     ArrayList<Order.OrderItem> order;
     Order.OrderItem sandwichOrder;
     Order.OrderItem sideOrder;
+    DecimalFormat fmt;
 
     /**
      * Constructor for objects of class ReceiptStrategy
@@ -19,10 +22,11 @@ public class ReceiptStrategy implements PrintingStrategy
     public ReceiptStrategy(Order o)
     {
         // initialise instance variables
-        //o= new Order();
+        this.o=o;
          order = o.getOrderItems();
          sandwichOrder = order.get(0);
          sideOrder = order.get(1);
+         fmt = new DecimalFormat("0.00");
     }
 
     /**
@@ -34,25 +38,39 @@ public class ReceiptStrategy implements PrintingStrategy
     public void display()
     {
         // put your code here
-        System.out.println("");
-        System.out.println(sandwichOrder.getName()+"\t"+sandwichOrder.getPrice());
-        System.out.println("\t{{{{ "+sandwichOrder.meatType+" }}}}");
-        System.out.println("\t"+sandwichOrder.toppings);
-        System.out.println("\t->|"+sandwichOrder.meatTops);
-        System.out.println(sideOrder.getName()+"\t"+sideOrder.getPrice());
+        System.out.println("\t\t\tRECEIPT\n");
+        System.out.println(o.header);
+        System.out.println("Order Number : "+o.ordersCount+"\n");
+        System.out.println(sandwichOrder.getQuantity()+" "+sandwichOrder.getName()+"\t\t"+sandwichOrder.getPrice());
+
+        ArrayList<String> s = new ArrayList();
+        s.addAll(sandwichOrder.toppings);
+        s.addAll(sandwichOrder.meatTops);
+        s.add("{{{{ "+sandwichOrder.meatType+" }}}}");
+        for(String element : s)
+        {
+            System.out.println(" "+element);
+        }
+       
+        System.out.println(sideOrder.getQuantity()+" "+sideOrder.getName()+"\t\t"+sideOrder.getPrice());
         double [] prices = pricing(sandwichOrder,sideOrder);
-        System.out.println("Sub.Total\t"+prices[0]);
-        System.out.println("Tax\t"+prices[1]);
-        System.out.println("Total\t"+prices[2]);
-        System.out.println("");
+        
+        System.out.println("Sub.Total\t"+(prices[0]));
+        System.out.println("Tax\t\t"+prices[1]);
+        System.out.println("Total\t\t"+prices[2]);
+        System.out.println("\n"+o.footer);
+        System.out.println("  ******************************  ");
     }
     public double[] pricing(Order.OrderItem sandW, Order.OrderItem fries)
     {
         double san=sandW.getPrice();
         double fr =fries.getPrice();
         x=san+fr;
-        double tax = (9/100)*x;
+        double tax = (9.00/100.00)*x;
         double total = x+tax;
+        x=Double.valueOf(fmt.format(x));
+        tax=Double.valueOf(fmt.format(tax));
+        total=Double.valueOf(fmt.format(total));
         double[] prices = {x,tax,total};
         return prices;
     }

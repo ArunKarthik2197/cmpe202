@@ -16,12 +16,13 @@ public class Order
         ArrayList<String> toppings;
         ArrayList<String> meatTops;
         String meatType;
-         
-        public OrderItem(String name, double price){
+        private int qty ;
+        public OrderItem(String name, double price,int quantity){
             this.name = name;
             this.price = price;
             toppings = new ArrayList();
             meatTops=new ArrayList();
+            this.qty=quantity;
         }
         
         public String getName()
@@ -31,6 +32,10 @@ public class Order
     public double getPrice()
     {
         return price;
+    }
+    public int getQuantity()
+    {
+        return qty;
     }
     
     public void setPrice(double price){
@@ -43,13 +48,12 @@ public class Order
         
     }
     // instance variables - replace the example below with your own
-    private int ordersCount;
+    protected int ordersCount;
     private PrintingStrategy p;
     private ArrayList<OrderItem> orders;
-    
-    private double sandwichPrice;
-    private double friesPrice;
-    private double price;
+    String header;
+    String footer;
+
     /**
      * Constructor for objects of class orders
      */
@@ -58,7 +62,8 @@ public class Order
         // initialise instance variables
         orders= new ArrayList();
         ordersCount = 0;
-     
+        header="\t\tFIVE GUYS\t\t";
+        footer="Register:1\t\t\t\t TranSeq no:####\nCashier:Nura\t\t\t\t";
     }
 
     /**
@@ -72,16 +77,21 @@ public class Order
         String[] availmeatTops={"G Onion","Jala Grilled"};
         String[] availtoppings = {"Lettuce","Tomato","Mayo","Pickles","Grilled Onion"};
         
-        Order.OrderItem o1 = new OrderItem("LBB", 5.59);
+        Order.OrderItem o1 = new OrderItem("LBB", 5.59,1);
         o1.toppings.addAll(Arrays.asList("Lettuce","Tomato"));
         o1.meatTops.addAll(Arrays.asList("G Onion","Jala Grilled"));
+        for(int i=0;i<o1.meatTops.size();i++)
+        {
+            o1.meatTops.set(i,"->|"+o1.meatTops.get(i));
+           
+        }
         o1.meatType="Bacon";
         orders.add(o1);
         
-        Order.OrderItem o2 = new OrderItem("LTL CAJ", 2.79);
+        Order.OrderItem o2 = new OrderItem("LTL CAJ", 2.79,1);
         orders.add(o2);
         
-        
+        ordersCount++;
     }
     public  ArrayList getOrderItems()
     {
