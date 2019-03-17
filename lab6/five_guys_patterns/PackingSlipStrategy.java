@@ -41,7 +41,10 @@ public class PackingSlipStrategy implements PrintingStrategy
         System.out.println("Order Number: "+o.ordersCount+"\n");
         System.out.println(o.header);
         System.out.println("Sandwich#"+1);
+        //prints the sandwich order
+        System.out.println("******************************************");
         System.out.println(sandwichOrder.getQuantity()+" "+sandwichOrder.getName());
+        System.out.println("******************************************");
         Collections.sort(sandwichOrder.toppings);
         Collections.sort(sandwichOrder.meatTops);
         
@@ -49,15 +52,16 @@ public class PackingSlipStrategy implements PrintingStrategy
         s.addAll(sandwichOrder.toppings);
         s.addAll(sandwichOrder.meatTops);
         s.add("{{{{ "+sandwichOrder.meatType+" }}}}");
-        
+        //prints the toppings and bun components
         for(String element : s)
         {
             System.out.println(" "+element);
         }
-        
-        
+        //prints the side dish order
+        System.out.println("******************************************");
         System.out.println(sideOrder.getQuantity()+" "+sideOrder.getName());
-       
+        System.out.println("******************************************");
+        //prints the footer
         System.out.println("\n"+o.footer);
     }
 }

@@ -37,7 +37,7 @@ public class ReceiptStrategy implements PrintingStrategy
      */
     public void display()
     {
-        // put your code here
+        
         System.out.println("\t\t\tRECEIPT\n");
         System.out.println(o.header);
         System.out.println("Order Number : "+o.ordersCount+"\n");
@@ -48,12 +48,14 @@ public class ReceiptStrategy implements PrintingStrategy
         s.addAll(sandwichOrder.toppings);
         s.addAll(sandwichOrder.meatTops);
         
+        //prints the condiments
         for(String element : s)
         {
-            System.out.println(" "+element);
+            System.out.println("   "+element);
         }
        
-        System.out.println(sideOrder.getQuantity()+" "+sideOrder.getName()+"\t\t"+sideOrder.getPrice());
+        //prints the side dish order
+        System.out.println("\n"+sideOrder.getQuantity()+" "+sideOrder.getName()+"\t\t"+sideOrder.getPrice());
         double [] prices = pricing(sandwichOrder,sideOrder);
         
         System.out.println("\n\nSub.Total\t\t$"+(prices[0]));
@@ -62,6 +64,7 @@ public class ReceiptStrategy implements PrintingStrategy
         System.out.println("\n"+o.footer);
         System.out.println("  ******************************  ");
     }
+    
     public double[] pricing(Order.OrderItem sandW, Order.OrderItem fries)
     {
         double san=sandW.getPrice();
