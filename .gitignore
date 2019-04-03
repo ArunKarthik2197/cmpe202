@@ -1,3 +1,8 @@
 
 *.class
 *.ctxt
+*.bin
+*.properties
+lab8/inputmask/.project
+lab8/inputmask/.classpath
+*.xml
