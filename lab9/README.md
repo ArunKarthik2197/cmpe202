@@ -1,0 +1,2 @@
+## Pattern Implemented : Factory Method
+
