@@ -18,27 +18,27 @@
 
 #### Config
 <b>For cost 25 and quarter machine</b><br>
-<img src="output/V1_config_cost25">
+<img src="output/V1_config_cost25"></img>
 
 #### Output
 <b>For cost 25 and quarter machine</b><br>
-<img src="output/V1_output_cost25">
+<img src="output/V1_output_cost25"></img>
 
 #### Config
 <b>For cost 50 and quarter machine</b><br>
-<img src="output/V1_config_cost50_QTR">
+<img src="output/V1_config_cost50_QTR"></img>
 
 #### Output
 <b>For cost 50 and quarter machine</b><br>
-<img src="output/V1_output_cost50_QTR">
+<img src="output/V1_output_cost50_QTR"></img>
 
 #### Config
 <b>For cost 50 and any coin machine</b><br>
-<img src="output/V1_config_cost50_Coins50">
+<img src="output/V1_config_cost50_Coins50"></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br>
-<img src="output/V1_output_cost50_Coins50">
+<img src="output/V1_output_cost50_Coins50"></img>
 
 ## Gumball Machine V2
 > - Consists of slot based and crank based machines.
@@ -48,32 +48,32 @@
 
 #### Config-1
 <b>For cost 25 and crank based one quarter machine</b><br>
-<img src="output/V2_config_crank_ONE_QTR">
+<img src="output/V2_config_crank_ONE_QTR"></img>
 
 #### Output
 <b>For cost 50 and crank based two quarter machine</b><br>
-<img src="output/output_coin_OneQtr_25Cent">
+<img src="output/output_coin_OneQtr_25Cent"></img>
 
 #### Config-2
 <b>For cost 25 and crank based one quarter machine</b><br>
-<img src="output/V2_config_crank_Cost_50_TWO_QTR">
+<img src="output/V2_config_crank_Cost_50_TWO_QTR"></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br>
-<img src="output/output_coin_TwoQtr_50Cent">
+<img src="output/output_coin_TwoQtr_50Cent"></img>
 
 #### Config-3
 <b>For cost 25 and slot based machine</b><br>
-<img src="output/V2_config_slot_Cost_25">
+<img src="output/V2_config_slot_Cost_25"></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br>
-<img src="output/output_slot_25Cent">
+<img src="output/output_slot_25Cent"></img>
 
 #### Config-4
 <b>For cost 50 and slot based machine</b><br>
-<img src="output/V2_config_slot_Cost_50">
+<img src="output/V2_config_slot_Cost_50"></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br>
-<img src="output/output_slot_50Cent">
+<img src="output/output_slot_50Cent"></img>
