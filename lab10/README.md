@@ -13,8 +13,8 @@
 > - Might cause problems when there are structural changes to an actual Gumball Machine.
 
 ## Gumball Machine V1
-> - V1 machine has configurations for different costs like `25` and `50`.
->> - Accepts either `Quarters` or `Any Coin ` in  `5,10,25 and 50`.
+> - V1 machine has configurations for different costs like ```25``` and ```50```.
+>> - Accepts either ```Quarters``` or ```Any Coin ``` in  ```5,10,25 and 50```.
 
 #### Config-1
 <b>For cost 25 and quarter machine</b><br><br>
@@ -42,8 +42,8 @@
 
 ## Gumball Machine V2
 > - Consists of slot based and crank based machines.
->> - Provides configurations for `crank based quarter machines` and `crank based two quarter machines` .
->> - Provides configuration for slot models with gumball cost as `25 cents` or `50 cents`.
+>> - Provides configurations for ```crank based quarter machines``` and ```crank based two quarter machines``` .
+>> - Provides configuration for slot models with gumball cost as ```25 cents``` or ```50 cents```.
 > - 4 possible configurations.
 
 #### Config-1
