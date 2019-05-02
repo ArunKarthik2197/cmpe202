@@ -52,7 +52,7 @@
 
 #### Output
 <b>For cost 50 and crank based two quarter machine</b><br><br>
-<img src="output/output_coin_OneQtr_25Cent.PNG" height=200></img>
+<img src="output/output_coin_OneQtr_25Cent.PNG" height=300></img>
 
 #### Config-2
 <b>For cost 25 and crank based one quarter machine</b><br><br>
@@ -60,7 +60,7 @@
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_coin_TwoQtr_50Cent.PNG" height=200></img>
+<img src="output/output_coin_TwoQtr_50Cent.PNG" height=300></img>
 
 #### Config-3
 <b>For cost 25 and slot based machine</b><br><br>
@@ -68,12 +68,12 @@
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_slot_25Cent.PNG" height=200></img>
+<img src="output/output_slot_25Cent.PNG" height=300></img>
 
 #### Config-4
 <b>For cost 50 and slot based machine</b><br><br>
-<img src="output/V2_config_slot_Cost_50.PNG"></img>
+<img src="output/V2_config_slot_Cost_50.PNG" height=200></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_slot_50Cent.PNG"></img>
+<img src="output/output_slot_50Cent.PNG" height=300></img>
