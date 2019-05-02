@@ -48,7 +48,7 @@
 
 #### Config-1
 <b>For cost 25 and crank based one quarter machine</b><br><br>
-<img src="output/V2_config_crank_ONE_QTR.PNG" width=40 height=40></img>
+<img src="output/V2_config_crank_ONE_QTR.PNG"  height=200></img>
 
 #### Output
 <b>For cost 50 and crank based two quarter machine</b><br><br>
