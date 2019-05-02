@@ -16,7 +16,7 @@
 > - V1 machine has configurations for different costs like `25` and `50`.
 >> - Accepts either `Quarters` or `Any Coin ` in  `5,10,25 and 50`.
 
-#### Config
+#### Config-1
 <b>For cost 25 and quarter machine</b><br><br>
 <img src="output/V1_config_cost25.PNG" height=200></img>
 
@@ -24,7 +24,7 @@
 <b>For cost 25 and quarter machine</b><br><br>
 <img src="output/V1_output_cost25.PNG" height=200></img>
 
-#### Config
+#### Config-2
 <b>For cost 50 and quarter machine</b><br><br>
 <img src="output/V1_config_cost50_QTR.PNG" height=200></img>
 
@@ -32,7 +32,7 @@
 <b>For cost 50 and quarter machine</b><br><br>
 <img src="output/V1_output_cost50_QTR.PNG" height=200></img>
 
-#### Config
+#### Config-3
 <b>For cost 50 and any coin machine</b><br><br>
 <img src="output/V1_config_cost50_Coins50.PNG" height=200></img>
 
