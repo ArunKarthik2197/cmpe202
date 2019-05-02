@@ -34,7 +34,7 @@
 
 #### Config
 <b>For cost 50 and any coin machine</b><br>
-<img src="output/V1_config_cost50_Coins50"/>
+<img src="output\V1_config_cost50_Coins50"/>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br>
