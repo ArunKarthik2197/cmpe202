@@ -18,27 +18,27 @@
 
 #### Config
 <b>For cost 25 and quarter machine</b><br><br>
-<img src="output/V1_config_cost25.PNG"></img>
+<img src="output/V1_config_cost25.PNG" height=200></img>
 
 #### Output
 <b>For cost 25 and quarter machine</b><br><br>
-<img src="output/V1_output_cost25.PNG"></img>
+<img src="output/V1_output_cost25.PNG" height=200></img>
 
 #### Config
 <b>For cost 50 and quarter machine</b><br><br>
-<img src="output/V1_config_cost50_QTR.PNG"></img>
+<img src="output/V1_config_cost50_QTR.PNG" height=200></img>
 
 #### Output
 <b>For cost 50 and quarter machine</b><br><br>
-<img src="output/V1_output_cost50_QTR.PNG"></img>
+<img src="output/V1_output_cost50_QTR.PNG" height=200></img>
 
 #### Config
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/V1_config_cost50_Coins50.PNG"></img>
+<img src="output/V1_config_cost50_Coins50.PNG" height=200></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/V1_output_cost50_Coins50.PNG"></img>
+<img src="output/V1_output_cost50_Coins50.PNG" height=200></img>
 
 ## Gumball Machine V2
 > - Consists of slot based and crank based machines.
@@ -52,23 +52,23 @@
 
 #### Output
 <b>For cost 50 and crank based two quarter machine</b><br><br>
-<img src="output/output_coin_OneQtr_25Cent.PNG"></img>
+<img src="output/output_coin_OneQtr_25Cent.PNG" height=200></img>
 
 #### Config-2
 <b>For cost 25 and crank based one quarter machine</b><br><br>
-<img src="output/V2_config_crank_Cost_50_TWO_QTR.PNG"></img>
+<img src="output/V2_config_crank_Cost_50_TWO_QTR.PNG" height=200></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_coin_TwoQtr_50Cent.PNG"></img>
+<img src="output/output_coin_TwoQtr_50Cent.PNG" height=200></img>
 
 #### Config-3
 <b>For cost 25 and slot based machine</b><br><br>
-<img src="output/V2_config_slot_Cost_25.PNG"></img>
+<img src="output/V2_config_slot_Cost_25.PNG" height=200></img>
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_slot_25Cent.PNG"></img>
+<img src="output/output_slot_25Cent.PNG" height=200></img>
 
 #### Config-4
 <b>For cost 50 and slot based machine</b><br><br>
