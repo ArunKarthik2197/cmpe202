@@ -68,7 +68,7 @@
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_slot_25Cent.PNG" height=300></img>
+<img src="output/output_slot_25Cent.PNG" height=400></img>
 
 #### Config-4
 <b>For cost 50 and slot based machine</b><br><br>
@@ -76,4 +76,4 @@
 
 #### Output
 <b>For cost 50 and any coin machine</b><br><br>
-<img src="output/output_slot_50Cent.PNG" height=300></img>
+<img src="output/output_slot_50Cent.PNG" height=400></img>
